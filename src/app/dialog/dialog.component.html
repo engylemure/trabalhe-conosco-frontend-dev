@@ -1,0 +1,28 @@
+<mat-toolbar class="header">
+  <div class="header-text-container">
+    <span class="text-style-1">
+      Pagamento para
+    </span>
+    <span class="payment-to">
+      {{data.name}}
+    </span>
+  </div>
+  <button mat-icon-button (click)="dialogRef.close()" >
+    <mat-icon >close</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="dialog-container">
+  <div class="user-box">
+    <img src="{{ data.user.img }}" alt="avatar" class="avatar">
+    <div class="text-container">
+      <div>
+        <span class="name"> {{ data.user.name}} </span>
+      </div>
+      <div class="sub-text-container">
+        <span>id: </span>{{ data.user.id }}
+        <span>{{ data.user.username }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,89 @@
+.dialog-container {
+  border-radius: 6px;
+  background-color: #ffffff;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  padding: 15px;
+}
+
+.user-box {
+  display: flex;
+  margin:0;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name {
+  width: 189px;
+  height: 28px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #474971;
+}
+.text-container {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-text-container {
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #474971;
+}
+.header-text-container {
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  color: #ffffff;
+}
+
+.payment-to {
+  width: 248px;
+  height: 19px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #7de6c6;
+}
+
+.payment-to .text-style-1 {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.header {
+  width: 640px;
+  height: 51px;
+  background-color: #474971;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-dialog-container {
+  padding: 0px !important;
+  border-radius: 6px;
+}
+
+mat-icon {
+  color: white;
+}

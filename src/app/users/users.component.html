@@ -1,8 +1,11 @@
-<li 
-  *ngFor="let user of userData"
-  [class.selected]="user === selectedUser"
-  (click)="openDialog(user)"
->
-  <app-user [user]="user"></app-user>
-</li>
+<div class="container">
+  <li
+    *ngFor="let user of userData"
+    [class.selected]="user === selectedUser"
+    (click)="openDialog(user)"
+  >
+    <app-user [user]="user"></app-user>
+  </li>
+</div>
+
 

@@ -5,6 +5,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { UserModel } from '../user/user';
 import { fetchUsers } from '../lib/api/fetchUsers';
 
+import { DialogComponent } from '../dialog/dialog.component';
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -25,8 +27,7 @@ export class UsersComponent implements OnInit {
 
   openDialog(user: UserModel): void {
     this.selectedUser = user;
-    let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
+    const dialogRef = this.dialog.open(DialogComponent, {
       data: { name: this.selectedUser.name, user: this.selectedUser }
     });
 
@@ -35,20 +36,4 @@ export class UsersComponent implements OnInit {
       this.selectedUser = result;
     });
   }
-}
-
-@Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-})
-export class DialogOverviewExampleDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
 }
