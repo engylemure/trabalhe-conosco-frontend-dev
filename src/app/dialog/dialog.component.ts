@@ -1,6 +1,7 @@
 import {Component, Inject, ViewEncapsulation} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import { UserModel } from '../user/user';
+import { fetchPayment } from '../lib/api/fetchPayment';
 
 @Component({
   selector: 'app-dialog',
@@ -18,7 +19,10 @@ export class DialogComponent {
     this.dialogRef.close();
   }
 
-  payUser() {
-    console.log('Usuario ' + this.data.user.name + 'Foi pago');
+  async payUser() {
+    const { user } = this.data
+    console.log('Usuario ' + user.name + 'Foi pago');
+    const payData = await fetchPayment(user.id, 1)
+    console.log(payData)
   }
 }

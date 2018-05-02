@@ -1,7 +1,4 @@
-export const urls = {
-  users:  'http://careers.picpay.com/tests/mobdev/users',
-  payment: 'transaction'
-};
+import { urls } from './urls'
 
 export async function fetchUsers() {
   const response = await fetch(urls.users);

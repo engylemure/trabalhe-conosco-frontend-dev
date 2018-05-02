@@ -2,7 +2,7 @@
   border-radius: 6px;
   background-color: #ffffff;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   padding: 15px;
 }
@@ -72,8 +72,6 @@
 }
 
 .header {
-  width: 640px;
-  height: 51px;
   background-color: #474971;
   display: flex;
   justify-content: space-between;
@@ -86,4 +84,8 @@
 
 mat-icon {
   color: white;
+}
+
+.payment-button {
+  color: green;
 }
