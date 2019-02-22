@@ -1,0 +1,17 @@
+<div style="container">
+  <!--<mat-grid-list cols="8" rowHeight="1:1">-->
+    <!--<mat-grid-tile-->
+            <!--*ngFor="let user of userData"-->
+            <!--[class.selected]="user === selectedUser">-->
+      <!--<app-user-card [user]="user"></app-user-card>-->
+    <!--</mat-grid-tile>-->
+  <!--</mat-grid-list>-->
+  <li
+          *ngFor="let user of userData"
+          [class.selected]="user === selectedUser"
+  >
+    <app-user-card [user]="user"></app-user-card>
+  </li>
+</div>
+
+

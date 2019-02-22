@@ -1,39 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { UsersComponent} from './users/users.component';
-import { FormsModule } from '@angular/forms';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { UserComponent } from './user/user.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatDialogModule } from '@angular/material';
+import {HeaderComponent} from './header/header.component';
+import {ContentComponent} from './content/content.component';
+import { UserCardComponent } from './user-card/user-card.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UsersComponent,
-    UserComponent,
-    DialogComponent
-  ],
-  entryComponents: [DialogComponent],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    MatListModule,
-    MatCardModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        ContentComponent,
+        UserCardComponent,
+        UserListComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatToolbarModule,
+        MatGridListModule,
+        MatDialogModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
